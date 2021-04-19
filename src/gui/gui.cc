@@ -484,7 +484,7 @@ void PCSX::GUI::startFrame() {
     glBindFramebuffer(GL_FRAMEBUFFER, m_offscreenFrameBuffer);
     checkGL();
 
-    if (ImGui::IsKeyPressed(GLFW_KEY_ESCAPE)) m_showMenu = !m_showMenu;
+    if (ImGui::IsKeyPressed(GLFW_KEY_G)) m_showMenu = !m_showMenu;
     if (io.KeyAlt && ImGui::IsKeyPressed(GLFW_KEY_ENTER)) setFullscreen(!m_fullscreen);
 }
 

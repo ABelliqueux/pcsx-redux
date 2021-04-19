@@ -29,22 +29,22 @@
 #include "core/psemu_plugin_defs.h"
 
 static const int s_defaultScancodes[16] = {
-    GLFW_KEY_BACKSPACE,  // Select
+    GLFW_KEY_COMMA,  // Select
     511,                 // n/a
     511,                 // n/a
-    GLFW_KEY_ENTER,      // Start
-    GLFW_KEY_UP,         // Up
-    GLFW_KEY_RIGHT,      // Right
-    GLFW_KEY_DOWN,       // Down
-    GLFW_KEY_LEFT,       // Left
-    GLFW_KEY_A,          // L2
-    GLFW_KEY_F,          // R2
-    GLFW_KEY_Q,          // L1
-    GLFW_KEY_R,          // R1
-    GLFW_KEY_S,          // Triangle
+    GLFW_KEY_P,      // Start
+    GLFW_KEY_U,         // Up
+    GLFW_KEY_K,      // Right
+    GLFW_KEY_J,       // Down
+    GLFW_KEY_H,       // Left
+    GLFW_KEY_3,          // L2
+    GLFW_KEY_1,          // R2
+    GLFW_KEY_E,          // L1
+    GLFW_KEY_A,          // R1
+    GLFW_KEY_Z,          // Triangle
     GLFW_KEY_D,          // Circle
-    GLFW_KEY_X,          // Cross
-    GLFW_KEY_Z,          // Square
+    GLFW_KEY_S,          // Cross
+    GLFW_KEY_Q,          // Square
 };
 
 static const SDL_GameControllerButton s_padMapping[16] = {
