@@ -26,6 +26,8 @@ SOFTWARE.
 
 #include "openbios/cdrom/statemachine.h"
 
+#include <stdatomic.h>
+
 #include "common/hardware/cdrom.h"
 #include "common/hardware/dma.h"
 #include "common/hardware/irq.h"
@@ -764,7 +766,7 @@ int __attribute__((section(".ramtext"))) cdromInnerInit() {
     int wait = 30000;
     while (wait-- && s_initializationComplete != 2) {
         if (s_initializationComplete == 1) return 1;
-        __asm__ volatile("" : : : "memory");
+        atomic_signal_fence(memory_order_consume);
     }
     return 0;
 }
